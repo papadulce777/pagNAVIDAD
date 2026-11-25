@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 15px;
+  background-image: url("../img/fondoo.jpg");
+  background-size: cover;
+  color: #0b1957;
+}
+.contenedor-principal {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 2px solid #b83b2b;
+  background-color: rgba(225, 168, 83, 0.939);
+  padding: 12px;
+}
+.contenedor-principal img {
+  max-width: 50%;
+  height: auto;
+}
+header {
+  border: 2px solid #b83b2b;
+  padding: 10px 15px 15px;
+  margin-bottom: 12px;
+}
+h1 {
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-nav {
+  background: transparent;
+  border: 2px solid #3b3512;
+  padding: 6px 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0b1957;
+  cursor: pointer;
+}
+.btn-nav:hover {
+  background-color: rgba(11, 25, 87, 0.12);
+}
+.caja-contenido {
+  border: 2px solid #b83b2b;
+  padding: 20px;
+  min-height: 320px;
+  margin-bottom: 12px;
+}
+.seccion {
+  display: none;
+}
+.seccion.activa {
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+th,td {
+  border: 1px solid #0b1957;
+  padding: 8px;
+  text-align: left;
+}
+#maqueta.maqueta-historia {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.bloque-historia {
+  flex: 1 1 260px;
+  border: 2px solid #0b1957;
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.tarjeta-personaje {
+  border: 1px solid #0b1957;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.tarjeta-personaje img {
+  margin-bottom: 8px;
+  width: 80px;
+  height: auto;
+  border: 2px solid #0b1957;
+}
+#listaRegalos {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+#listaRegalos li {
+  margin-bottom: 6px;
+}
+.plato-item {
+  border-bottom: 1px solid #0b1957;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+button {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #0b1957;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #0b1957;
+  font-weight: bold;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+input[type="text"] {
+  padding: 6px 8px;
+  border: 1px solid #0b1957;
+}
+footer {
+  border: 2px solid #b83b2b;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navidaaa</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/navida.js"></script>
+</head>
+<body>
+  <div class="contenedor-principal">
+    <header>
+      <h1>NAVIDAD</h1>
+      <nav>
+        <button type="button" class="btn-nav" onclick="mostrarSeccion('bienvenida')">bienvenida</button>
+        <button type="button" class="btn-nav" onclick="mostrarSeccion('historia')">historia</button>
+        <button type="button" class="btn-nav" onclick="mostrarSeccion('personajes')">personajes</button>
+        <button type="button" class="btn-nav" onclick="mostrarSeccion('regalos')">Regalos</button>
+        <button type="button" class="btn-nav" onclick="mostrarSeccion('comida')">Comida</button>
+      </nav>
+    </header>
+
+    <main class="caja-contenido">
+      <section id="bienvenida" class="seccion activa">
+        <h2>Bienvenida</h2>
+        <p>¡Feliz Navidad! Aquí encontrarás información, personajes, ideas de regalos y platos navideños >:3</p>
+
+        <h3>Tabla de actividades</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Actividad</th>
+              <th>Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Armar el árbol</td>
+              <td>Tarde</td>
+            </tr>
+            <tr>
+              <td>Cena navideña</td>
+              <td>Noche</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Lista de deseos rápidos</h3>
+        <ul>
+          <li>Pasar tiempo en familia y amigos</li>
+          <li>Compartir una buena cena</li>
+          <li>Escuchar villancicos y abrir regalos si</li>
+        </ul>
+
+        <h3>Imagen!</h3>
+        <img src="img/fotico.webp" alt="Decoración navideña" />
+      </section>
+      <section id="historia" class="seccion">
+        <h2>Historia de la Navidad</h2>
+        <div id="maqueta" class="maqueta-historia">
+          <div class="bloque-historia">
+            <h3>Origen y tradición</h3>
+            <p>
+              La Navidad se celebra cada 25 de diciembre y reúne costumbres de encuentro,
+              luces, música y compartir en familia alrededor de la mesa.
+            </p>
+          </div>
+          <div class="bloque-historia">
+            <h3>Símbolos navideños</h3>
+            <p>
+              El árbol, las coronas, las luces y los villancicos representan la unión y la
+              celebración de fin de año.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="personajes" class="seccion">
+        <h2>Personajes</h2>
+
+        <div class="tarjeta-personaje">
+          <img src="img/pushen.jpg" alt="Personaje 1" /><br />
+          <button type="button" onclick="verDescripcion('desc1')">Ver descripción Personaje 1</button>
+          <p id="desc1" style="display: none;">
+            <strong>santa:</strong> Reparte alegría y regalos en la víspera navideña (es santa pusheen omg)
+          </p>
+        </div>
+
+        <div class="tarjeta-personaje">
+          <img src="img/push.jpg" alt="Personaje 2" /><br />
+          <button type="button" onclick="verDescripcion('desc2')">Ver descripción Personaje 2</button>
+          <p id="desc2" style="display: none;">
+            <strong>arbol:</strong> Es el arbolito mas lindo de toda navidad (viva pusheen)
+          </p>
+        </div>
+      </section>
+
+      <section id="regalos" class="seccion">
+        <h2>Lista de Regalos</h2>
+        <input type="text" id="inputRegalo" placeholder="Escribe un regalo..." />
+        <button type="button" onclick="agregarRegalo()">Agregar</button>
+        <button type="button" onclick="limpiarRegalos()">Limpiar lista</button>
+
+        <ul id="listaRegalos"></ul>
+      </section>
+
+      <section id="comida" class="seccion">
+        <h2>Comida Navideña — Carrito</h2>
+
+        <div class="plato-item">
+          <span><strong>Picana / Plato navideño tradicionaal</strong> — 50 Bs</span>
+          <button type="button" onclick="agregarAlCarrito('Plato navideño', 50)">Agregar</button>
+        </div>
+        <div class="plato-item">
+          <span><strong>Pavo al horno</strong> — 45 Bs</span>
+          <button type="button" onclick="agregarAlCarrito('Pavo al horno', 45)">Agregar</button>
+        </div>
+        <div class="plato-item">
+          <span><strong>Panetón y chocolate</strong> — 25 Bs</span>
+          <button type="button" onclick="agregarAlCarrito('Panetón y chocolate', 25)">Agregar</button>
+        </div>
+
+        <h3>Carrito de compras</h3>
+        <ul id="listaCarrito"></ul>
+        <p><strong>Total: Bs <span id="totalCarrito">0</span></strong></p>
+        <button type="button" onclick="vaciarCarrito()">Vaciar carrito</button>
+      </section>
+    </main>
+
+    <footer>
+      diseñado por: Jazmin Ariana Quispe Quispe
+    </footer>
+  </div>
+</body>
+</html>
